@@ -1,0 +1,14 @@
+# Environment variables / secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local PostgreSQL
+.pgdata/
+postgres.log
+
+# macOS
+.DS_Store
