@@ -178,16 +178,3 @@ Good next steps include:
 - build an evaluation set with ground-truth SQL.
 
 Those are intentionally left as student work.
-
-## Suggested teaching point
-
-A useful class discussion is to ask students why this query can be *syntactically correct* but still scientifically misleading:
-
-```sql
-SELECT country_code, year,
-       total_field_area_ha - value_ha AS difference_ha
-FROM ftw_country_summary
-JOIN agriculture_stat USING (country_code, year);
-```
-
-The database can compute the difference correctly, while the application still needs metadata and domain reasoning to explain whether the two quantities are actually comparable.
